@@ -1,4 +1,6 @@
-public static char toUpper(char ch) {
+import java.util.Scanner;
+class Main {	
+	public static char toUpper(char ch) {
 	    return (char)(ch & (~(1<<5)));
 	}
 	public static char toLower(char ch) {
@@ -12,3 +14,4 @@ public static char toUpper(char ch) {
 		char res = toUpper(ch);
 		System.out.println(res);
 	}
+}
