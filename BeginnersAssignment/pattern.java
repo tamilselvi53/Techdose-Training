@@ -1,9 +1,6 @@
 import java.util.*;
 public class Main
 {
-    public static double areaOfCircle(double r) {
-        return 22.7 * r * r;
-    }
     public static void pattern(int n) {
         int ctr = 1;
         for (int i = 1; i <= n; i++) {
