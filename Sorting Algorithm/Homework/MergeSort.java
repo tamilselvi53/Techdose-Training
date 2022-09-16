@@ -37,12 +37,29 @@ public class Main
             arr[k++] = a[j++];
         }
     }
+    public static int[] merge2(int[] arr, int l, int m, int r) {
+        //GAP method --> O(1)
+        //T(n): O(nlogn)
+        int len = r - l + 1; //8/2, 4/2, 2/2
+        while (len >= 1) {
+            int i = l, j = l + len;
+            while (i <= r && j <= r) {
+                if (arr[i] > arr[j]) {
+                    swap(arr, i, j);
+                }
+                i++;
+                j++;
+            }
+            len /= 2;
+        }
+        return arr;
+    }
     public static void mergeSort(int[] arr, int l, int r) {
         if (l < r) {
             int mid = (l + r) / 2;
             mergeSort(arr, l, mid);
             mergeSort(arr, mid + 1, r);
-            merge(arr, l, mid, r);
+            merge2(arr, l, mid, r);
         }
         
     }
