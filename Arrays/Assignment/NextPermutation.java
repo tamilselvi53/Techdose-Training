@@ -1,5 +1,6 @@
 class Solution {
-    //Reverse from ptr1 + 1 to n to get lowest sequence
+    //T(n): O(n)
+    //Reverse from ptr + 1 to n to get lowest sequence
     public void reverse(int[] nums, int start, int end) {
         while (start < end) {
             swap(nums, start, end);
