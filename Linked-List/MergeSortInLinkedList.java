@@ -2,7 +2,7 @@ class Solution
 {
     //Function to sort the given linked list using Merge Sort.
     //T(n): O(n Logn)
-    //S(n): O(n)
+    //S(n): O(log n) --> recursive stack 
     static Node findMiddle(Node head) {
         Node dummy = new Node(-1);
         dummy.next = head;
