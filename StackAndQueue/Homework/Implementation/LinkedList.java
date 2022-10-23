@@ -78,6 +78,7 @@ class LinkedList {
 	    Node node = new Node(val);
 		if (head == null) {
 			head = node;
+			front = node;
 		} else {
 		    rear.next = node;
 		}/*
