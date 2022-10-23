@@ -22,7 +22,8 @@ class QueueUsingArray {
             System.out.println("Overflow");
             return;
         }
-        queue[++rear] = val;
+        rear = (rear + 1) % size;
+        queue[rear] = val;
         length++;
     }
     int dequeue() {
@@ -31,7 +32,9 @@ class QueueUsingArray {
             return -1;
         }
         length--;
-        return queue[front++];
+        int res = queue[front];
+        front = (front + 1) % size;
+        return res;
     }
     int peek() {
         if (isEmpty()) {
